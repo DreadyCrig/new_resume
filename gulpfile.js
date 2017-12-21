@@ -1,6 +1,10 @@
 var gulp = require('gulp');
 var $    = require('gulp-load-plugins')();
 var browserSync = require('browser-sync').create();
+var useref = require('gulp-useref');
+// Other requires...
+var uglify = require('gulp-uglify');
+var gulpIf = require('gulp-if');
 
 var sassPaths = [
   'bower_components/normalize.scss/sass',
@@ -31,6 +35,14 @@ gulp.task('sass', function() {
 
 gulp.task('default', ['sass'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
+});
+
+gulp.task('useref', function(){
+  return gulp.src('*.html')
+    .pipe(useref())
+    // Minifies only if it's a JavaScript file
+    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulp.dest(''))
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function (){

@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
     <div class="grid-container">
       <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
@@ -162,9 +166,15 @@
       </div>
     </div>
 
-    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+
+		<!--build:js js/main.min.js -->
+<!--
     <script src="bower_components/what-input/dist/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
-    <script src="js/app.js"></script>
+-->
+		<script src="js/main.min.js"></script>
+		<!-- endbuild -->
   </body>
 </html>
