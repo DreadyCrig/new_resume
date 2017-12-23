@@ -1,0 +1,42 @@
+
+h2.exp {
+    border-bottom: 1px dashed #ddd;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+div.job-meta {
+
+	h3.title {
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 500;
+	}
+
+	h4.name {
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 700;
+	}
+
+	h4.range {
+		font-size: 15px;
+		line-height: 15px;
+		display: inline-block;
+	}
+
+	h4.duration {
+		font-size: 15px;
+		line-height: 15px;
+		display: inline-block;
+	}
+	h4.duration::before {
+	    content: "\2022";
+	    margin: 0 5px;
+	}
+
+	h4.location {
+		font-size: 15px;
+		line-height: 15px;
+	}
+}

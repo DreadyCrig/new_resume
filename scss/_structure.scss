@@ -1,0 +1,109 @@
+header {
+	background: #000;
+	color: #FFF;
+
+	h1 {
+		display: inline-block;
+		padding-top: 20px;
+	}
+
+	.profile {
+		background: #FFF;
+		display: inline-block;
+		width: 80px;
+		height: 80px;
+		border: 1px solid #FFF;
+		border-radius: 50%;
+		position: relative;
+	    top: -10px;
+	    margin-right: 10px;
+	    text-align: left !important;
+		img {
+			height: 65px;
+			margin: 15px 0 0 15px;
+		}
+
+	}
+
+	nav {
+		background: #7ac9ed;
+	    height: 50px;
+	    border-top: #eee solid 10px;
+	    margin-bottom: 20px;
+	}
+}
+
+main {
+}
+
+aside {
+	background: $sidebar-color;
+}
+
+div.callout {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 2px 3px rgba(0,0,0,.2);
+}
+
+ul.social-icons {
+    list-style-type: none;
+
+    li {
+    	float: left;
+    	margin-left: 10px;
+	}
+
+	a {
+	    padding: 6px;
+	    border-radius: 50%;
+	    color: #fff;
+	    width: 24px;
+	    height: 24px;
+	    display: inline-block;
+	    opacity: .7;
+	    transition: opacity .3s,transform .3s;
+	}
+
+	i {
+	    vertical-align: text-top;
+	    width: 12px;
+	    text-align: center;
+	    position: relative;
+	    top: -8px;
+	}
+}
+
+.social-icons a:active, .social-icons a:focus, .social-icons a:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.social-icons a.twitter {
+    background: #7ac9ed;
+}
+
+.social-icons a.linkedin {
+    background: #0c7bb6;
+}
+
+.social-icons a.email i {
+	margin-left: -0.5px;
+    top: -3px;
+    font-size: 13px;
+}
+.social-icons a.email {
+	background: #d74d2f;
+}
+.work-exp {
+	background: #7ac9ed;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border-radius: 50%;
+    float: left;
+    margin: 10px 10px 0 0;
+    padding-top: 5px;
+
+    i {
+    	position: relative;
+    }
+}

@@ -46,7 +46,7 @@ gulp.task('useref', function(){
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function (){
-  gulp.watch('scss/scss/**/*.scss', ['sass']);
+  gulp.watch('scss/**/*.scss', ['sass']);
   // Reloads the browser whenever HTML or JS files change
   gulp.watch('./*.html', browserSync.reload);
   gulp.watch('js/**/*.js', browserSync.reload);
