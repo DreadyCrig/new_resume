@@ -1,8 +1,17 @@
-
 h2.exp {
     border-bottom: 1px dashed #ddd;
     margin-bottom: 20px;
     padding-bottom: 10px;
+}
+
+div.job-entry {
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+div.job-entry:last-child {
+    border: none;
 }
 
 div.job-meta {
