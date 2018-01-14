@@ -37,6 +37,17 @@
 					    	<span class="work-exp">
 					    		<i class="fa fa-user-o fa-stack-1x fa-inverse"></i>
 					    	</span>
+		          	<h2 class="exp">About Me</h2>
+		          </div>
+		          <div id="about" class="large-12 medium-12 small-12 cell">
+		          		I'm Shawn and I like to create, develop, and code things.  I enjoy challenges, troubleshooting problems, fixing things that are broken and giving them new life.  I work with PHP, Javascript, HTML5, CSS3 and MySQL everyday and I offer my skills to others like a digital mercenary or a pixel perfectionist.  This resume is a work in progress which I built as a simple webpage to demonstrate basic abilities.
+		          </div>
+
+
+		          <div class="large-12 medium-12 small-12 cell">
+					    	<span class="work-exp">
+					    		<i class="fa fa-gears fa-stack-1x fa-inverse"></i>
+					    	</span>
 		          	<h2 class="exp">Work Experience</h2>
 		          </div>
 		          <div id="job-list" class="large-12 medium-12 small-12 cell">
@@ -132,6 +143,10 @@
 	{{#jobs}}
   <div class="job-entry">
   	<div class="job-meta">
+{{#if image}}
+  <img src="/assets/images/{{image}}" />
+{{/if}}
+
 	    <h3 class="title"><span class="visually-hidden">Job Title:</span>{{title}}</h3>
 	    <h4 class="name"><span class="visually-hidden">Company Name:</span>{{name}}</h4>
 	    <h4 class="range"><span class="visually-hidden">Date Range:</span>{{range}}</h4>
@@ -185,6 +200,7 @@ var data = {jobs:[
     {
         "title": "Full Stack Developer",
         "name": "Southern Tide Media",
+        "image": "stm-logo.png",
         "range": "Dec 2015 \u2013 Present",
         "duration": "2 yrs 1 mo",
         "location": "Myrtle Beach, South Carolina Area",
@@ -193,6 +209,7 @@ var data = {jobs:[
     {
         "title": "Full Stack Developer",
         "name": "Eagle Web Designs, Inc.",
+        "image": "ewd-logo.png",
         "range": "Aug 2014 \u2013 Feb 2015",
         "duration": "7 mos",
         "location": "Myrtle Beach, SC",
@@ -201,6 +218,7 @@ var data = {jobs:[
     {
         "title": "Full Stack Developer",
         "name": "Self employed Freelancer",
+        "image": false,
         "range": "Aug 2012 \u2013 Aug 2014",
         "duration": "2 years",
         "location": "Myrtle Beach, SC",
@@ -209,6 +227,7 @@ var data = {jobs:[
     {
         "title": "Full Stack Developer",
         "name": "Eagle Web Designs, Inc.",
+        "image": "ewd-logo.png",
         "range": "Mar 2010 \u2013 Jul 2012",
         "duration": "2 yrs 5 mos",
         "location": "Myrtle Beach, SC",

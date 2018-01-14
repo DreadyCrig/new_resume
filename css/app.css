@@ -8329,7 +8329,16 @@ ul.social-icons a.github span:first-child {
 .social-icons a span:last-child {
 	vertical-align: top;
 	font-size: 14px;
+    overflow: hidden;
+    display: inline-block;
+    width: 91%;
 }
+
+.job-meta img {
+    margin: 10px;
+    float: right;
+}
+
 .work-exp {
     background: #7ac9ed;
     width: 35px;
@@ -8360,7 +8369,7 @@ ul.social-icons a.github span:first-child {
 
 h2.exp {
     border-bottom: 1px dashed #ddd;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     padding-bottom: 10px
 }
 
@@ -8372,6 +8381,10 @@ div.job-entry {
 
 div.job-entry:last-child {
     border: none
+}
+
+div.job-meta:first-child {
+    margin-top: 20px;
 }
 
 div.job-meta h3.title {
@@ -8446,11 +8459,13 @@ img.recommendation-image {
     border: 1px solid transparent;
     border-radius: 49.9%;
     box-sizing: border-box;
-    background-clip: content-box
+    background-clip: content-box;
+    margin-top: 20px;
 }
 
 div.recommendation-meta {
     margin-left: 64px;
+    margin-top: 20px;
     overflow-y: hidden
 }
 
@@ -8465,4 +8480,8 @@ div.recommendation-meta p {
     font-weight: 400;
     font-size: 15px;
     line-height: 17px
+}
+
+div#about {
+    margin: 20px 0;
 }
