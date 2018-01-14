@@ -8485,3 +8485,16 @@ div.recommendation-meta p {
 div#about {
     margin: 20px 0;
 }
+
+div.loading {
+	display: block;
+	margin: 0 auto;
+}
+
+
+#elRaptor {
+	position: fixed;
+	bottom: -700px;
+	right: 0;
+	display: block;
+}
