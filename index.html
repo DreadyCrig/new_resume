@@ -41,6 +41,15 @@
 		          </div>
 		          <div id="job-list" class="large-12 medium-12 small-12 cell">
 		          </div>
+
+		          <div class="large-12 medium-12 small-12 cell">
+					    	<span class="work-exp">
+					    		<i class="fa fa-user-o fa-stack-1x fa-inverse"></i>
+					    	</span>
+		          	<h2 class="exp">Recommendations</h2>
+		          </div>
+		          <div id="recommendations-list" class="large-12 medium-12 small-12 cell">
+		          </div>
 		        </div>
 
           </div>
@@ -78,37 +87,65 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
 
-		<!--build:js js/main.min.js -->
-<!--
-    <script src="bower_components/what-input/dist/what-input.js"></script>
-    <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
--->
 		<script src="js/main.min.js"></script>
-		<!-- endbuild -->
 <style type="text/css">
 
 
 
 </style>
-		<script id="job-template" type="text/x-handlebars-template">
-			{{#jobs}}
-		  <div class="job-entry">
-		  	<div class="job-meta">
-			    <h3 class="title"><span class="visually-hidden">Job Title:</span>{{title}}</h3>
-			    <h4 class="name"><span class="visually-hidden">Company Name:</span>{{name}}</h4>
-			    <h4 class="range"><span class="visually-hidden">Date Range:</span>{{range}}</h4>
-			    <h4 class="duration"><span class="visually-hidden">Duration:</span>{{duration}}</h4>
-			    <h4 class="location"><span class="visually-hidden">Location:</span>{{location}}</h4>
-			  </div>
-		    <div class="job-body">
-		      {{{body}}}
-		    </div>
-		  </div>
-		   {{/jobs}}
-		</script>
+<script id="job-template" type="text/x-handlebars-template">
+	{{#jobs}}
+  <div class="job-entry">
+  	<div class="job-meta">
+	    <h3 class="title"><span class="visually-hidden">Job Title:</span>{{title}}</h3>
+	    <h4 class="name"><span class="visually-hidden">Company Name:</span>{{name}}</h4>
+	    <h4 class="range"><span class="visually-hidden">Date Range:</span>{{range}}</h4>
+	    <h4 class="duration"><span class="visually-hidden">Duration:</span>{{duration}}</h4>
+	    <h4 class="location"><span class="visually-hidden">Location:</span>{{location}}</h4>
+	  </div>
+    <div class="job-body">
+      {{{body}}}
+    </div>
+  </div>
+   {{/jobs}}
+</script>
+<script id="recommendations-template" type="text/x-handlebars-template">
+	{{#recommendations}}
+		<li class="recommendation-entity">
+			<div class="recommendation-container">
+				<a class="recommendation-person" href="{{link}}" class="">
+			  <img class="recommendation-image" alt="{{name}}" height="56" width="56" src="" data-src="/assets/images/{{image}}">
+
+			    <div class="recommendation-meta">
+			      <h3 class="recommendation-name">{{name}}</h3>
+			      <p class="recommendation-title">{{title}}</p>
+			      <p class="recommendation-desc">
+			        {{desc}}
+			      </p>
+			    </div>
+				</a>
+			</div>
+			<div class="recommendation-comment">
+			  <blockquote class="recommendation-comment">
+			    {{comment}}
+			  </blockquote>
+			</div>
+		</li>
+   {{/recommendations}}
+</script>
 <script src="js/vendor/handlebars.min.js"></script>
 <script type="text/javascript">
+var req = {recommendations:[
+	{
+		"link"    : "//www.linkedin.com/in/n8crocker/",
+		"name"    : "Nate Crocker",
+		"title"   : "Director of Multimedia at USAF Chaplain Corps and Owner, StudioP40",
+		"image"   : "nate-profile.jpg",
+		"desc"    : "July 31, 2017, Shawn was a client of Nate’s",
+		"comment" : "I have worked with Shawn on several projects ranging from plugin customization to complete website development. Each time Shawn kept in regular contact to provide status updates and made excellent recommendations that saved time and resources to develop. He is a gifted developer and offers more than reasonable pricing."
+	}
 
+]};
 var data = {jobs:[
     {
         "title": "Full Stack Developer",
@@ -142,6 +179,48 @@ var data = {jobs:[
         "location": "Myrtle Beach, SC",
         "body": "I wrote the custom CMS that is still be used on there client websites to this day, during this time I helped convert there client websites to HTML5 and built a lot of small business websites."
     }
+    ],
+		recommendations:[
+			{
+				"link"    : "//www.linkedin.com/in/n8crocker/",
+				"name"    : "Nate Crocker",
+				"title"   : "Director of Multimedia at USAF Chaplain Corps and Owner, StudioP40",
+				"image"   : "nate-profile.jpg",
+				"desc"    : "July 31, 2017, Shawn was a client of Nate’s",
+				"comment" : "I have worked with Shawn on several projects ranging from plugin customization to complete website development. Each time Shawn kept in regular contact to provide status updates and made excellent recommendations that saved time and resources to develop. He is a gifted developer and offers more than reasonable pricing."
+			},
+			{
+				"link"    : "//www.linkedin.com/in/antonelneculai/",
+				"name"    : "Antonel Neculai",
+				"title"   : "Digital Technologist & Story Teller | PR & Social Marketing Strategist | Entrepreneur | Engineer | NASA Social Alumni",
+				"image"   : "antonel-profile.jpg",
+				"desc"    : "July 18, 2016, Antonel was a client of Shawn’s",
+				"comment" : "I have worked with Shawn on various projects related to online marketing and web sites for the North Myrtle Beach Chamber of Commerce.<br/>Shawn has proved himself to be a very hard working, true professional. His volume of technical knowledge on things related to online marketing, emails, web sites, social channels, programming, and web design is truly impressive. But besides knowledge, Shawn has also displayed the treats of best professionalism, holding very high standards of conduct, communication, and interaction.<br/>It is a pleasure collaborating with Shawn and see him relentlessly working on projects until every detail is taken care of and everything is finalized to the best! I am also enchanted by his writing skills, a treat not very often encountered among the ranks of IT professionals and programmers.<br/>I strongly recommend Shawn to anyone in need of an excellent professional to take care of projects related to web sites, web programming, web design, social media channels, and email marketing."
+			},
+			{
+				"link"    : "//www.linkedin.com/in/brandonrobertevans/",
+				"name"    : "Brandon Evans",
+				"title"   : "Co-Owner at Southern Tide Media",
+				"image"   : "brandon-profile.jpg",
+				"desc"    : "May 31, 2016, Brandon managed Shawn directly",
+				"comment" : "Highly skilled and motivated, Shawn is not only a top notch developer, but he actively looks for improvements that will help clients grown even when that's \"not part of the project description\", which is a rare trait. In a phrase, Shawn is a talented workaholic."
+			},
+			{
+				"link"    : "//www.linkedin.com/in/joshgcanfield/",
+				"name"    : "Joshua Canfield",
+				"title"   : "Owner of Code Clarity™ (of Simplify Design®)",
+				"image"   : "josh-profile.jpg",
+				"desc"    : "March 2, 2013, Joshua worked with Shawn but at different companies",
+				"comment" : "Shawn is just a wonderful developer. He is ambitious and attentive which is more than important when it comes to programming. He is precise and detail oriented which goes a very long way in this industry."
+			},
+			{
+				"link"    : "//www.linkedin.com/in/eaglewebdesigns/",
+				"name"    : "Chuck Bunnell",
+				"title"   : "Web Programmer / Designer at Eagle Web Designs, Inc & Coastal Carolina University",
+				"image"   : "chuck-profile.jpg",
+				"desc"    : "November 12, 2012, Chuck was a client of Shawn’s",
+				"comment" : "Shawn is not only an excellent high-end programmer, but he has a knack for figuring out how to do the \"impossible.\" He loves the challenge and always comes up with an answer. If you have a website that needs programming changes, Shawn can do it; even when other can't."
+			}
 ]};
 
 
@@ -157,6 +236,13 @@ var output = template(data);
 
 // HTML element with id "animalList" is set to the output above
 document.getElementById("job-list").innerHTML = output;
+
+source = document.getElementById("recommendations-template").innerHTML;
+template = Handlebars.compile(source);
+output = template(data);
+document.getElementById("recommendations-list").innerHTML = output;
+
+
 </script>
   </body>
 </html>

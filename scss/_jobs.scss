@@ -49,3 +49,62 @@ div.job-meta {
 		line-height: 15px;
 	}
 }
+
+
+.recommendation-entity {
+    margin-right: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border-top: 1px solid #e6e9ec;
+    padding: 16px auto;
+}
+.recommendation-entity:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+div.recommendation-container {
+	width: 40%;
+}
+
+div.recommendation-comment {
+    width: 60%;
+}
+
+.recommendation-person::before {
+    display: block;
+    width: 25%;
+}
+
+.recommendation-title:last-child .recommendation-person-comma-item::after, .recommendation-person::before {
+    content: "";
+}
+
+img.recommendation-image {
+    float: left;
+    width: 56px;
+    height: 56px;
+    border: 1px solid transparent;
+    border-radius: 49.9%;
+    box-sizing: border-box;
+    background-clip: content-box;
+}
+
+div.recommendation-meta {
+    margin-left: 64px;
+    overflow-y: hidden;
+
+    h3 {
+		font-weight: 600;
+		color: rgba(0,0,0,.85);
+		line-height: 20px;
+		font-size: 17px;
+    }
+
+    p {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 17px;
+    }
+}
