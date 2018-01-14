@@ -1,0 +1,52 @@
+ul.social-icons {
+    list-style-type: none;
+
+    li {
+    	float: left;
+    	margin-left: 10px;
+    	width: 100%;
+    	display: block;
+	}
+
+	a span {
+	    padding: 6px;
+	    border-radius: 50%;
+	    color: #fff;
+	    width: 24px;
+	    height: 24px;
+	    display: inline-block;
+	    opacity: .7;
+	    transition: opacity .3s,transform .3s;
+
+		i {
+		    vertical-align: text-top;
+		    width: 12px;
+		    text-align: center;
+		    position: relative;
+		    top: -8px;
+		}
+
+	}
+}
+
+.social-icons a:active span i, .social-icons a:focus span i , .social-icons a:hover span i {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.social-icons a.twitter span{
+    background: #7ac9ed;
+}
+
+.social-icons a.linkedin span{
+    background: #0c7bb6;
+}
+
+.social-icons a.email span i {
+	margin-left: 0;
+    top: -7px;
+    font-size: 13px;
+}
+.social-icons a.email span i{
+	background: #d74d2f;
+}
