@@ -8487,14 +8487,25 @@ div#about {
 }
 
 div.loading {
-	display: block;
-	margin: 0 auto;
+    display: block;
+    margin: 50px auto;
+    text-align: center;
 }
 
-
-#elRaptor {
+#easter-egg {
 	position: fixed;
 	bottom: -700px;
 	right: 0;
 	display: block;
+}
+
+.barrel_roll {
+    -webkit-transition: -webkit-transform 4s ease;
+    -webkit-transform: rotate(360deg);
+    -moz-transition: -moz-transform 4s ease;
+    -moz-transform: rotate(360deg);
+    -o-transition: -o-transform 4s ease;
+    -o-transform: rotate(360deg);
+    transition: transform 4s ease;
+    transform: rotate(360deg);
 }
