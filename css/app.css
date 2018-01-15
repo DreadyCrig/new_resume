@@ -8509,3 +8509,76 @@ div.loading {
     transition: transform 4s ease;
     transform: rotate(360deg);
 }
+
+
+/** Mobile Phone */
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px)  {
+
+	div.recommendation-entity {
+		display: block;
+	}
+
+	div.recommendation-comment {
+		width: 82%;
+		display: inline-block;
+		position: static;
+		margin-left: 0;
+		float: left;
+		font-size: 12px;
+		border-bottom: 1px dashed #000;
+		padding-bottom: 10px;
+	}
+
+	header .profile img {
+	    /* float: left; */
+	    /* text-align: left; */
+	}
+
+	header .profile {
+	    float: left;
+	    top: 15px;
+	}
+
+	h2.exp {
+	    margin-top: 15px;
+	}
+
+	h2.be-social {
+	    margin-left: 0;
+	}
+
+	ul.social-icons, ul.social-icons li {
+	    margin: 5px 0;
+	}
+
+	div.footer {
+	    margin-top: 10px;
+	    font-size: 12px;
+	}
+
+	div.recommendation-container {
+	    width: 100%;
+	    min-width: 100%;
+	    display: block;
+	    float: none;
+	    clear: both;
+	}
+
+	img.recommendation-image {
+	    float: left;
+	}
+
+	h3.recommendation-name {
+	    font-size: 12px;
+	    line-height: 14px;
+	}
+
+	div.recommendation-meta p {
+	    font-size: 10px;
+	    line-height: 12px;
+	    margin-bottom: 5px;
+	}
+
+	p.recommendation-title {}
+}
