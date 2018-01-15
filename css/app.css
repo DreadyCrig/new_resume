@@ -8520,7 +8520,7 @@ div.loading {
 	}
 
 	div.recommendation-comment {
-		width: 82%;
+		width: 100%;
 		display: inline-block;
 		position: static;
 		margin-left: 0;
@@ -8528,6 +8528,7 @@ div.loading {
 		font-size: 12px;
 		border-bottom: 1px dashed #000;
 		padding-bottom: 10px;
+		margin-bottom: 20px;
 	}
 
 	header .profile img {
@@ -8567,6 +8568,7 @@ div.loading {
 
 	img.recommendation-image {
 	    float: left;
+	    margin-top: 7px;
 	}
 
 	h3.recommendation-name {
@@ -8579,6 +8581,14 @@ div.loading {
 	    line-height: 12px;
 	    margin-bottom: 5px;
 	}
+	.recommendation-entity{
+		display: block;
+	}
 
-	p.recommendation-title {}
+	blockquote.recommendation-comment {
+		border: 0;
+	}
+	.recommendation-comment:last-child {
+	    border-bottom: 0;
+	}
 }
